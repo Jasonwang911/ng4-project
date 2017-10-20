@@ -1,5 +1,12 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="from-group">
+			<input class="form-control" placeholder="请输入要查询的产品名称" [formControl]="titleFilter">
+		</div>
+	</div>
+</div>
 <!-- 产品组件 -->
-<div *ngFor="let product of products" class="col-md-4 col-sm-4 col-lg-4">
+<div *ngFor="let product of products | filter:'title':keyword " class="col-md-4 col-sm-4 col-lg-4">
 	<div class="thumbnail">
 		<img src="http://placehold.it/320x150">
 		<div class="caption">
